@@ -17,6 +17,10 @@ public class Musica {
     private Long id;
 
     @NotBlank(message = "Campo obrigarório.")
+    @Column(unique = true, length = 9)
+    private String token;
+
+    @NotBlank(message = "Campo obrigarório.")
     private String nome;
 
     @NotBlank(message = "Campo obrigarório.")
